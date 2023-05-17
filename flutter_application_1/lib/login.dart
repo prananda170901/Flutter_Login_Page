@@ -20,9 +20,10 @@ class _MyLoginState extends State<MyLogin> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/Login.png'),
+            image: AssetImage(
+              'assets/logo.png'),
             fit: BoxFit.cover,
           ),
         ),
