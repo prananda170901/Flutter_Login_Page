@@ -10,11 +10,11 @@
 
 ### Login
 
-![](ss/login.png)
+![](ss/regis.png)
 
 ### Registrasi
 
-![](ss/regis.png)
+![](ss/login.png)
 
 ### Reset Password
 
