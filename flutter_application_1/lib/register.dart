@@ -167,7 +167,7 @@ class _myRegisterState extends State<myRegister> {
                             child: Text(
                               'Login',
                               style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 4, 248)),
+                                  color: Color.fromRGBO(234, 234, 238, 1)),
                             ),
                           ),
                           TextButton(

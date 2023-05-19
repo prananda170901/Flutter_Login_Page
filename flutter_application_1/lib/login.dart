@@ -8,8 +8,9 @@ class MyLogin extends StatefulWidget {
 }
 
 class _MyLoginState extends State<MyLogin> {
-  //Password Field obscureText  Handler
+  // Password Field obscureText  Handler
   bool _isHidden = true;
+
   void _toggleVisibility() {
     setState(() {
       _isHidden = !_isHidden;
@@ -22,13 +23,13 @@ class _MyLoginState extends State<MyLogin> {
       child: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-              'assets/logo.png'),
+            image: AssetImage('assets/login.png'),
             fit: BoxFit.cover,
           ),
         ),
         child: Scaffold(
-          backgroundColor: Color.fromARGB(0, 0, 0, 0),
+          backgroundColor:
+              Color(0xFF87BE07), // Ubah warna background menjadi putih
           body: Stack(
             children: [
               Row(
@@ -42,7 +43,7 @@ class _MyLoginState extends State<MyLogin> {
                       '\n Login',
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        color: Color.fromARGB(255, 4, 60, 245),
+                        color: Color.fromARGB(255, 246, 247, 248),
                         fontSize: 40.0,
                       ),
                     ),
@@ -90,7 +91,6 @@ class _MyLoginState extends State<MyLogin> {
                                 : Icon(Icons.visibility_off),
                           ),
                           filled: true,
-                          // hintText: 'Password',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ),
@@ -101,25 +101,24 @@ class _MyLoginState extends State<MyLogin> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                maximumSize: Size(170.0, 90.0),
-                                minimumSize: Size(170.0, 60.0),
-                                primary: Colors.black,
-                                shape: StadiumBorder(),
-                              ),
-                              onPressed: () {},
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                //crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text('LOG IN'),
-                                  Icon(
-                                    Icons.lock,
-                                    color: Color.fromARGB(255, 3, 247, 104),
-                                  ),
-                                ],
-                              )),
+                            style: ElevatedButton.styleFrom(
+                              maximumSize: Size(170.0, 90.0),
+                              minimumSize: Size(170.0, 60.0),
+                              primary: Colors.black,
+                              shape: StadiumBorder(),
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text('LOG IN'),
+                                Icon(
+                                  Icons.lock,
+                                  color: Color.fromARGB(255, 3, 247, 104),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                       SizedBox(height: 30.0),
@@ -133,10 +132,11 @@ class _MyLoginState extends State<MyLogin> {
                             child: Text(
                               'Register',
                               style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  decoration: TextDecoration.underline,
-                                  decorationThickness: 2),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                decoration: TextDecoration.underline,
+                                decorationThickness: 2,
+                              ),
                             ),
                           ),
                           TextButton(
@@ -146,11 +146,12 @@ class _MyLoginState extends State<MyLogin> {
                             child: Text(
                               'Forgot password?',
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  decoration: TextDecoration.underline,
-                                  decorationThickness: 2),
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                decoration: TextDecoration.underline,
+                                decorationThickness: 2,
+                              ),
                             ),
                           ),
                         ],
